@@ -1,14 +1,16 @@
 import React from 'react';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import HomePage from './page/homepage/homepage.component';
 
-import HomePage from './page/homepage/homepage.component'; // This should now work
+const HatsPage = () => <h1>Hats Page</h1>;
 
 function App() {
   return (
     <div>
-      <HomePage />
+          <Route path="/" component={HomePage} />
     </div>
   );
 }
+
 
 export default App;
