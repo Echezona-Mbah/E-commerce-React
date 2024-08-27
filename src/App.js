@@ -12,8 +12,9 @@ const TopicList = () =>{
   return <h1>Topic List Page</h1>
 };
 
-const TopicDeteil = () =>{
-  return  <h1>Topic Detail Page</h1>
+const TopicDeteil = (props) =>{
+  console.log(props)
+  return  <h1>Topic Detail Page{props.match.params.topicId}</h1>
 };
 
 function App() {
