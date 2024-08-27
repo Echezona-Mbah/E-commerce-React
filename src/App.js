@@ -13,7 +13,7 @@ const TopicList = () => {
 };
 
 const TopicDetail = () => {
-  const { topicId } = useParams(); // Get the route parameter
+  const { topicId } = useParams(); // Get the route p
 
   return (
     <div>
