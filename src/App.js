@@ -17,7 +17,9 @@ const TopicDetail = () => {
 
   return (
     <div>
-      <Link to="/hats">Go to Hats Page</Link>
+     <Link to="/topicdetail/9">Go to Hats Page 9</Link>
+      <Link to="/topicdetail/4">Go to Hats Page 4</Link>
+      <Link to="/topicdetail/2">Go to Hats Page 2</Link>
       <h1>Topic Detail Page: {topicId}</h1>
     </div>
   );
