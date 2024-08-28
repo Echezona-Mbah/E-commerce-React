@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './manu-item.style.css';
 
 const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
-    const navigate = useNavigate(); // Hook to navigate programmatically
+    const navigate = useNavigate();
 
     return (
         <div className={`${size} menu-item`} onClick={() => navigate(linkUrl)}>
