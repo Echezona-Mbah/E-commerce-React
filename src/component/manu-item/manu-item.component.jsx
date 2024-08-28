@@ -1,7 +1,7 @@
 import React from "react";
 import './manu-item.style.css';
 
-const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
+const MenuItem = ({ title, imageUrl, size }) => {
     return (
         <div className={`${size} menu-item`}>
             <div
