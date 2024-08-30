@@ -12,7 +12,7 @@ const PreviewCollection = ({title,items}) => {
             .map(({id, ...otherItemProps})=>(
                 <CollectionItem key={id} {...otherItemProps}/>
             ))}
-
+{/* kkk jjjjk*/}
         </div>
     </div>
     )
