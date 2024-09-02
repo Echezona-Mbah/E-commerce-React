@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import HomePage from './page/homepage/homepage.component';
 import ShopPage from './page/shop/shop.component';
+import Header from './component/header/header.component';
 
 // const TopicDetail = () => {
 //   const { topicId } = useParams(); // Get the route parameter
@@ -20,6 +21,7 @@ import ShopPage from './page/shop/shop.component';
 function App() {
   return (
     <Router>
+         <Header/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
