@@ -1,25 +1,31 @@
-import { Firebase } from "firebase/app";
-import 'firebase/firestore';
-import 'firebase/auth';
+// Import necessary functions from Firebase SDK
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
+// Firebase configuration
 const config = {
-        apiKey: "AIzaSyDZMBdADok3iXF195jNkXnMESnNQ8751es",
-        authDomain: "crwn-db-30297.firebaseapp.com",
-        projectId: "crwn-db-30297",
-        storageBucket: "crwn-db-30297.appspot.com",
-        messagingSenderId: "162056911150",
-        appId: "1:162056911150:web:67f95fe9a7c85032c662bf",
-        measurementId: "G-VMKS1P2ZJD"
-}
+    apiKey: "AIzaSyDZMBdADok3iXF195jNkXnMESnNQ8751es",
+    authDomain: "crwn-db-30297.firebaseapp.com",
+    projectId: "crwn-db-30297",
+    storageBucket: "crwn-db-30297.appspot.com",
+    messagingSenderId: "162056911150",
+    appId: "1:162056911150:web:67f95fe9a7c85032c662bf",
+    measurementId: "G-VMKS1P2ZJD"
+};
 
-Firebase.initializeApp(config);
+// Initialize Firebase
+const firebaseApp = initializeApp(config);
 
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
+// Initialize services
+export const auth = getAuth(firebaseApp);
+export const firestore = getFirestore(firebaseApp);
 
+// Set up Google auth provider
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ prompt: 'select_account' });
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({prompt: 'select_account'});
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+// Sign in with Google popup
+export const signInWithGoogle = () => signInWithPopup(auth, provider);
 
-export default firebase;
+export default firebaseApp;
