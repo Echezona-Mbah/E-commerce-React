@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import HomePage from './page/homepage/homepage.component';
 import ShopPage from './page/shop/shop.component';
+import SignInAndSignUpPage from './page/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './component/header/header.component';
 
 // const TopicDetail = () => {
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
+        <Route path="/signin" element={<SignInAndSignUpPage />} />
         {/* <Route path="/topicdetail/:topicId" element={<TopicDetail />} /> */}
       </Routes>
     </Router>
