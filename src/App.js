@@ -20,18 +20,34 @@ import auth from './firebase/firebase.utils'
 //   );
 // };
 
-function App() {
-  return (
-    <Router>
-         <Header/>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/signin" element={<SignInAndSignUpPage />} />
-        {/* <Route path="/topicdetail/:topicId" element={<TopicDetail />} /> */}
-      </Routes>
-    </Router>
-  );
+// function App() {
+//   return (
+//     <Router>
+//          <Header/>
+//       <Routes>
+//         <Route path="/" element={<HomePage />} />
+//         <Route path="/shop" element={<ShopPage />} />
+//         <Route path="/signin" element={<SignInAndSignUpPage />} />
+//         {/* <Route path="/topicdetail/:topicId" element={<TopicDetail />} /> */}
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+class App extends React.Component() {
+  render(){
+    return (
+      <Router>
+           <Header/>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/signin" element={<SignInAndSignUpPage />} />
+          {/* <Route path="/topicdetail/:topicId" element={<TopicDetail />} /> */}
+        </Routes>
+      </Router>
+    );
+  }
 }
 
 export default App;
