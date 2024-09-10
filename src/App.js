@@ -5,6 +5,7 @@ import HomePage from './page/homepage/homepage.component';
 import ShopPage from './page/shop/shop.component';
 import SignInAndSignUpPage from './page/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './component/header/header.component';
+import auth from './firebase/firebase.utils'
 
 // const TopicDetail = () => {
 //   const { topicId } = useParams(); // Get the route parameter
