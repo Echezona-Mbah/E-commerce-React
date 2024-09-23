@@ -4,7 +4,7 @@ import './custom-button.style.css';
 
 const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => (
   <button
-    className={`${isGoogleSignIn ? 'google-sign-in' : ''} custom-button`}  // Added  kfdggxdd space between classes
+    className={`${isGoogleSignIn ? 'google-sign-in' : ''} custom-button`}  // Added refnre kfdggxdd space between classes
     {...otherProps}
   >
     {children}
